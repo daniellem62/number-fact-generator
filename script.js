@@ -1,16 +1,14 @@
 //MVP 1
-//Pull a random trivia fact from http://numbersapi.com/
 
-//Test pulling from the API
 async function getFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/random?json`, {
+    const response = await fetch(`http://numbersapi.com/random?json&min=0&max=10000`, {
       headers: {
         Accept: "application/JSON",
       },
     });
     const data = await response.json();
-    console.log(data.text);
+    console.log(data);
     return data.text;
   } catch (error) {
     console.log(`error: ${error.message}`);
@@ -18,12 +16,9 @@ async function getFact() {
 }
 
 const newTriviaButton = document.getElementById("triviaBtn");
-//fetch the api in a variable
-//create another variable for the JSON
-//Return result
-//When the user presses a button
+
 newTriviaButton.addEventListener("click", getAndDisplayFact);
-//Then diplay fact as text into a field
+
 function displayFact(fact) {
   const factElement = document.getElementById("fact");
   factElement.textContent = fact;
