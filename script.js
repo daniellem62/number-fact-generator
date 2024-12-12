@@ -1,6 +1,6 @@
 //MVP 1
 
-async function getFact() {
+async function getTriviaFact() {
   try {
     const response = await fetch(`http://numbersapi.com/random?json&min=0&max=10000`, {
       headers: {
@@ -17,13 +17,15 @@ async function getFact() {
 
 const newTriviaButton = document.getElementById("triviaBtn");
 
-newTriviaButton.addEventListener("click", getAndDisplayFact);
+newTriviaButton.addEventListener("click", getAndDisplayTriviaFact);
 
-function displayFact(fact) {
+document.addEventListener("DOMContentLoaded", getAndDisplayTriviaFact);
+
+function displayTriviaFact(fact) {
   const factElement = document.getElementById("fact");
   factElement.textContent = fact;
 }
-async function getAndDisplayFact() {
-  const fact = await getFact();
-  displayFact(fact);
+async function getAndDisplayTriviaFact() {
+  const fact = await getTriviaFact();
+  displayTriviaFact(fact);
 }
