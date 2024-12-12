@@ -2,6 +2,10 @@
 //Show random trivia on page load
 document.addEventListener("DOMContentLoaded", getAndDisplayTriviaFact);
 
+//Assign image for Trivia
+
+const picture = document.getElementById("picture");
+
 //TRIVIA SECTION
 
 //Pull random Trivia from API
@@ -23,8 +27,16 @@ async function getTriviaFact() {
 //Assigned Trivia button
 const newTriviaButton = document.getElementById("triviaBtn");
 
+//funtion to change to Trivia Image
+function changeToTrivia() {
+  picture.src = "images/Chasers.jpg";
+}
+
 //Adds click event to the trivia button
-newTriviaButton.addEventListener("click", getAndDisplayTriviaFact);
+newTriviaButton.addEventListener("click", () => {
+  getAndDisplayTriviaFact();
+  changeToTrivia();
+});
 
 //Update the DOM with new fact
 function displayTriviaFact(fact) {
@@ -36,6 +48,7 @@ function displayTriviaFact(fact) {
 async function getAndDisplayTriviaFact() {
   const fact = await getTriviaFact();
   displayTriviaFact(fact);
+
 }
 
 //MATH SECTION
@@ -59,8 +72,16 @@ async function getMathFact() {
 //Assigned math button
 const newMathButton = document.getElementById("mathBtn");
 
+//funtion to change to Trivia Image
+function changeToMath() {
+  picture.src = "images/Einstein-2.jpg";
+}
+
 //Adds click event to the trivia button
-newMathButton.addEventListener("click", getAndDisplayMathFact);
+newMathButton.addEventListener("click", () => {
+  getAndDisplayMathFact();
+  changeToMath();
+});
 
 //Update the DOM with new fact
 function displayMathFact(fact) {
@@ -95,8 +116,16 @@ async function getDateFact() {
 //Assigned date button
 const newDateButton = document.getElementById("dateBtn");
 
-//Adds click event to the trivia button
-newDateButton.addEventListener("click", getAndDisplayDateFact);
+//funtion to change to Date Image
+function changeToDate() {
+  picture.src = "images/Calendar.jpg";
+}
+
+//Adds click event to the date button
+newDateButton.addEventListener("click", () => {
+  getAndDisplayDateFact();
+  changeToDate();
+});
 
 //Update the DOM with new fact
 function displayDateFact(fact) {
@@ -131,8 +160,16 @@ async function getYearFact() {
 //Assigned year button
 const newYearButton = document.getElementById("yearBtn");
 
+//funtion to change to Year Image
+function changeToYear() {
+  picture.src = "images/Year.jpg";
+}
+
 //Adds click event to the year button
-newYearButton.addEventListener("click", getAndDisplayYearFact);
+newYearButton.addEventListener("click", () => {
+  getAndDisplayYearFact(); 
+  changeToYear();
+});
 
 //Update the DOM with new fact
 function displayYearFact(fact) {
