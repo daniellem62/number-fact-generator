@@ -11,7 +11,11 @@ const picture = document.getElementById("picture");
 //Pull random Trivia from API
 async function getTriviaFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/random?json&min=0&max=10000`, {
+    let inputText = document.getElementById("userInput").value;
+    if (inputText == "") {
+      inputText = "random"
+    }
+    const response = await fetch(`http://numbersapi.com/${inputText}?json`, {
       headers: {
         Accept: "application/JSON",
       },
@@ -55,7 +59,11 @@ async function getAndDisplayTriviaFact() {
 //Pull random math from API
 async function getMathFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/random/math?json&min=0&max=10000`, {
+    let inputText = document.getElementById("userInput").value;
+    if (inputText == "") {
+      inputText = "random"
+    }
+    const response = await fetch(`http://numbersapi.com/${inputText}/math?json&min=0&max=10000`, {
       headers: {
         Accept: "application/JSON",
       },
@@ -98,7 +106,11 @@ async function getAndDisplayMathFact() {
 //Pull random date from API
 async function getDateFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/random/date?json`, {
+    let inputText = document.getElementById("userInput").value;
+    if (inputText == "") {
+      inputText = "random"
+    }
+    const response = await fetch(`http://numbersapi.com/${inputText}/date?json`, {
       headers: {
         Accept: "application/JSON",
       },
@@ -141,7 +153,11 @@ async function getAndDisplayDateFact() {
 //Pull random year from API
 async function getYearFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/random/year?json&min=0&max=2025`, {
+    let inputText = document.getElementById("userInput").value;
+    if (inputText == "") {
+      inputText = "random"
+    }
+    const response = await fetch(`http://numbersapi.com/${inputText}/year?json`, {
       headers: {
         Accept: "application/JSON",
       },
@@ -178,3 +194,4 @@ async function getAndDisplayYearFact() {
   const fact = await getYearFact();
   displayYearFact(fact);
 }
+
