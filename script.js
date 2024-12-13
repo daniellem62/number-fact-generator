@@ -17,7 +17,6 @@ async function getTriviaFact() {
       },
     });
     const data = await response.json();
-    console.log(data);
     return data.text;
   } catch (error) {
     console.log(`error: ${error.message}`);
@@ -27,7 +26,7 @@ async function getTriviaFact() {
 //Assigned Trivia button
 const newTriviaButton = document.getElementById("triviaBtn");
 
-//funtion to change to Trivia Image
+//Function to change to Trivia Image
 function changeToTrivia() {
   picture.src = "images/Chasers.jpg";
 }
@@ -62,7 +61,6 @@ async function getMathFact() {
       },
     });
     const data = await response.json();
-    console.log(data);
     return data.text;
   } catch (error) {
     console.log(`error: ${error.message}`);
@@ -72,7 +70,7 @@ async function getMathFact() {
 //Assigned math button
 const newMathButton = document.getElementById("mathBtn");
 
-//funtion to change to Trivia Image
+//Function to change to Trivia Image
 function changeToMath() {
   picture.src = "images/Einstein-2.jpg";
 }
@@ -106,7 +104,6 @@ async function getDateFact() {
       },
     });
     const data = await response.json();
-    console.log(data);
     return data.text;
   } catch (error) {
     console.log(`error: ${error.message}`);
@@ -116,7 +113,7 @@ async function getDateFact() {
 //Assigned date button
 const newDateButton = document.getElementById("dateBtn");
 
-//funtion to change to Date Image
+//function to change to Date Image
 function changeToDate() {
   picture.src = "images/Calendar.jpg";
 }
@@ -150,7 +147,6 @@ async function getYearFact() {
       },
     });
     const data = await response.json();
-    console.log(data);
     return data.text;
   } catch (error) {
     console.log(`error: ${error.message}`);
@@ -160,7 +156,7 @@ async function getYearFact() {
 //Assigned year button
 const newYearButton = document.getElementById("yearBtn");
 
-//funtion to change to Year Image
+//Function to change to Year Image
 function changeToYear() {
   picture.src = "images/Year.jpg";
 }
