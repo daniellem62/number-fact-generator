@@ -20,7 +20,10 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-align: center;
-    color:rgb(150, 173, 241);
+    color: lightcyan;
+    background-color: rgb(13, 13, 109);
+    width: 50%;
+    margin: 0 auto;
 }
 
 .fact-display {
@@ -28,7 +31,7 @@ h2 {
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   background-color: aliceblue;
-  margin: 50px 25%;
+  margin: 30px 25%;
   text-align: center;
   padding: 20px;
   border: 3px solid black;
@@ -43,7 +46,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 300px;
+    height: 250px;
     width: auto;
     border: 3px solid rgb(249, 251, 252);
 }
@@ -80,4 +83,14 @@ footer {
 
 .buttonContainer {
     display: flex;
+}
+
+.userInputContainer input[type=text] {
+    padding: 12px 20px;
+    margin: 10px auto;
+    width: 10%;
+    display: block;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 20px;
 }
