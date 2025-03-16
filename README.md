@@ -62,14 +62,7 @@ This project meets the following goals:
 - Successfully fetches and displays data from NumbersAPI
 - Provides an interactive UI for users to explore number facts
 - Implements error handling for failed requests
-- Responsive design ensuring accessibility across devices
 
-## 🔍 Testing Checklist
-Before deployment, the application was tested for:
-- Browser compatibility (Chrome, Firefox, Edge)
-- Proper error handling for network failures
-- Responsive design on different screen sizes
-- Ensuring data retrieval for different number types
 
 ## 📚 Resources
 - [MDN Fetch API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
