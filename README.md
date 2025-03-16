@@ -38,16 +38,21 @@ This project utilizes the **NumbersAPI** to fetch interesting numerical facts. A
 ## 📜 Code Implementation
 Example of fetching number facts:
 ```js
-async function fetchNumberFact(input) {
+async function getTriviaFact() {
   try {
-    const response = await fetch(`http://numbersapi.com/${input}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+    let inputText = document.getElementById("userInput").value;
+    if (inputText == "") {
+      inputText = "random"
     }
-    const fact = await response.text();
-    document.getElementById("fact-container").textContent = fact;
+    const response = await fetch(`http://numbersapi.com/${inputText}?json`, {
+      headers: {
+        Accept: "application/JSON",
+      },
+    });
+    const data = await response.json();
+    return data.text;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.log(`error: ${error.message}`);
   }
 }
 ```
