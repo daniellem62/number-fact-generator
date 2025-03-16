@@ -25,7 +25,7 @@ This project utilizes the **NumbersAPI** to fetch interesting numerical facts. A
 ### Step 3: Project Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/number-facts-generator.git
+   git clone https://github.com/daniellem62/number-fact-generator.git
    ```
 2. Open `index.html` in a browser.
 3. Interact with the app by entering numbers or dates.
